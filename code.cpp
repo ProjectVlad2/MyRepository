@@ -8,6 +8,7 @@
 using namespace std;
 int prioritet(char a);
 
+бля хуета какая то 
 
 int otvet(char a[])
 {
