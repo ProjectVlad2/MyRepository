@@ -9,18 +9,23 @@ using namespace std;
 int prioritet(char a);
 
 
+
 int otvet(char a[])
 {
+
 	char razdelznak = '_';
 	char vihod[100];
 	char stek[100];
 	int j = 0, m = 0, i = 0;
 	int otvet;
 	char perem;
+	int testdlyanekorrektnogovvode;
 	int len;
+	
 
 
 	len = strlen(a);
+
 
 	while ((i < len) && (a[i] != '0' || a[i] != '='))
 	{
@@ -79,7 +84,7 @@ int otvet(char a[])
 				}
 			}
 		}
-		if (a[i] == ')')
+		else if (a[i] == ')')
 		{
 			while (stek[j - 1] != '(')
 			{
@@ -93,6 +98,12 @@ int otvet(char a[])
 
 			}
 			j--;
+		}
+		
+		else
+		{
+			testdlyanekorrektnogovvode = 1;
+			break;
 		}
 
 		i++;
@@ -112,7 +123,7 @@ int otvet(char a[])
 	vihod[m] = '\0';
 	//cout << "Представление в обратной польской = " << vihod << endl;
 
-	float massint[100];
+	double massint[100];
 	int k = 0;
 	float promzn = 0;
 	
@@ -237,6 +248,15 @@ int otvet(char a[])
 			cout << "   Программа поддерживает максимум 6-ти значный ответ" << endl;
 			cout << "   если число получится с запятой, то программа его округлит" << endl << endl;
 		}
+
+		
+
+		else if (testdlyanekorrektnogovvode == 1)
+		{
+			cout << "Некорректный ввод" << endl;
+			break;
+		}
+
 		else
 		cout << "Тест ИнтМассива (Ответ) = " << massint[kk] << endl;
 		
