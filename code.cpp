@@ -11,6 +11,13 @@ int prioritet(char a);
 
 int otvet(char a[])
 {
+	char razdelznak = '_';
+	char vihod[100];
+	char stek[100];
+	int j = 0, m = 0, i = 0;
+	int otvet;
+	char perem;
+	int len;
 
 
 	len = strlen(a);
