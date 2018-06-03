@@ -9,6 +9,12 @@ using namespace std;
 int prioritet(char a);
 
 бля хуета какая то 
+аааааа
+ываыва
+ыа
+ыва
+ыва
+ываы
 
 int otvet(char a[])
 {
